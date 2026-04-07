@@ -9,6 +9,7 @@ export const isValidSpecies = (value: unknown): value is Species =>
   VALID_SPECIES.includes(value as Species);
 
 
+
 export const getAllPets = (species?: string): Pet[] => {
 
   if (species !== undefined) {
@@ -23,7 +24,7 @@ export const getPetById = (id: string): Pet | undefined => {
 };
 
 export const createPet = (data: Omit<Pet, 'id'>): Pet => {
-
+  
   const newPet: Pet = { id: uuidv4(), ...data };
   petStore.push(newPet);
   return newPet;

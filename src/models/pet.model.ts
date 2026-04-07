@@ -11,8 +11,7 @@ export type Pet = {
   available: boolean;
 };
 
-// This is your in-memory "database".
-// All pets are stored here. It starts with a few seeded entries so you can test GET right away.
+
 export const petStore: Pet[] = [
   {
     id: uuidv4(),
